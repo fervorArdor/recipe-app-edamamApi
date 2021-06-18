@@ -45,7 +45,7 @@ const Recipe = (props) => {
                     label={`${PROCNT.label} ${Math.round(PROCNT.quantity)} ${PROCNT.unit} `}
                 />
                 <div style={{ marginTop: '20px' }}>
-                    <Button variant='contained' size='large' color='secondary'>View Recipe</Button>
+                    <Button target="_blank" href={url} variant='contained' size='large' color='secondary'>View Recipe</Button>
                 </div>
             </CardContent>
             <CardActions disableSpacing>

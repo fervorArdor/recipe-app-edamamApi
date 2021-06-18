@@ -1,7 +1,7 @@
 import React from 'react'
 import { categories } from '../constants/categories'
 import { Button, Typography } from '@material-ui/core'
-import { Visibility as Views } from '@material-ui/icons'
+import { Visibility as ViewsIcon } from '@material-ui/icons'
 import useStyles from './styles'
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
                             {category.title}
                         </Button>
                         <div className={classes.view}>
-                            <Views />
+                            <ViewsIcon />
                             <Typography variant='subtitle1'>{category.views}</Typography>
                         </div>
                     </div>

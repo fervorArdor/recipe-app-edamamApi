@@ -71,3 +71,11 @@ export const dietLabel = [
         value: 'low-sodium'
     }
 ]
+
+export const meals = [
+	'Breakfast',
+	'Teatime',
+	'Lunch',
+	'Snack',
+	'Dinner'
+]

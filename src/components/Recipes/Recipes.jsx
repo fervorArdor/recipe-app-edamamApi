@@ -3,7 +3,7 @@ import Home from '../Home/Home'
 import Recipe from '../Recipes/Recipe/Recipe'
 import useStyles from './styles'
 
-const Recipes = ({ query, recipes }) => {
+const Recipes = ({ recipes }) => {
     const classes = useStyles()
     
     return (

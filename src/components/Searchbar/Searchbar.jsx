@@ -13,22 +13,21 @@ const Searchbar = () => {
     const [cuisine, setCuisine] = useState('By Cuisine')
     const [dish, setDish] = useState('By Dish Type')
     const [diet, setDiet] = useState('By Diet Label')
-
-    useEffect(() => {
-        getRecipes()
-    }, [query, diet, cuisine, dish])
-
+    
     const test1 = dish !== 'By Dish Type' ? `&dishType=${dish}` : ''
     const test2 = diet !== 'By Diet Label' ? `&diet=${diet}` : ''
     const test3 = cuisine !== 'By Cuisine' ? `&cuisineType=${cuisine}` : ''
     const url = `https://api.edamam.com/search?q=${query}${test1}${test2}${test3}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=20`
+    
+    useEffect(() => {
+        getRecipes()
+    }, [query, diet, cuisine, dish])
+
 
     const getRecipes = async () => {
-        console.log(url)
         const response = await fetch(url)
         const data = await response.json()
         setRecipes(data.hits)
-        console.log(recipes)
     }
 
     const updateSearch = (e) => {
